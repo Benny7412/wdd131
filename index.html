@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Benjamin</title>
+    <meta name="description"
+        content="My name is Benjamin Walveranta. This website is a home page for class WDD 131 - Dynamic Web Fundamentals">
+    <meta name="author" content="Benjamin">
+    <link rel="stylesheet" href="styles/base.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="title-wrapper">
+            <h1>WDD 131: Dynamic Web Fundamentals - Benjamin Walveranta</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/benjamin-w-8b61462bb/">
+                        LinkedIn
+                    </a></li>
+                <li><a href="https://byupw.instructure.com/">
+                        Canvas
+                    </a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">
+                        Scripture
+                    </a></li>
+                <li><a href="../final_project">
+                        Final Project
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="card" id="about-me-card">
+            <div class="card-header">
+                <h2>About Me</h2>
+            </div>
+            <div>
+                <p>My name is Benjamin. I was born in Texas, USA and I'm currently enrolled in BYU Pathway working on a
+                    degree in Software Engineering. I enjoy spending time with my family and I like to play games with
+                    my friends in some of my free time.</p>
+            </div>
+            <img src="images/profile.jpg" alt="Profile photo" id="profile-photo">
+            <div id="state-container">
+                <h2> Texas, USA</h2>
+                <img src="images/texas-flag.jpg" alt="Texas Flag"> <!--caption Texas Flag-->
+                <p>With a land area of 268,596 square miles Texas is the largest state in the contigious US. Texas is
+                    known for Cowboys, BBQ, and the fact that you can drive for 5 hours and still be in the same state.
+                </p>
+            </div>
+        </section>
+
+        <section class="card" id="web-dev-card">
+            <div class="card-header">
+                <h2>Web Dev Resources</h2>
+            </div>
+            <div id="web-dev-body">
+                <ul>
+                    <li><a>Dev to Community</a></li>
+                    <li><a>Smashing Magazine</a></li>
+                    <li><a>CSS Tricks</a></li>
+                    <li><a>W3 Schools</a></li>
+                    <li><a>Udemy</a></li>
+                    <li><a>Image Placeholder</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><span id="currentyear"></span> | Benjamin Walveranta | Texas, USA</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+</body>

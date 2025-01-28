@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+
+}
+
+header,
+footer {
+    color: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: sticky;
+    z-index: 10;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #5d6885;
+    border: solid 1px rgba(32, 32, 32, 0.199);
+}
+
+.nav-element,
+h2,
+h1 {
+    font-family: Montserrat, sans-serif;
+}
+
+
+h1 {
+    color: white;
+    align-self: center;
+    padding: 1.5rem;
+    text-wrap: nowrap;
+    font-size: calc(19px + 1vw);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    text-align: center;
+    width: min(90%, 1400px);
+    background-color: rgb(220, 234, 246);
+    border-radius: 2px;
+    flex-grow: 1;
+    border: solid 1px rgba(32, 32, 32, 0.199);
+}
+
+main h2 {
+    font-size: 50px;
+    padding: 2rem;
+    font-weight: 500;
+}
+
+#temple-figure-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+    place-items: center;
+    padding: 2rem;
+    justify-items: center;
+}
+
+#temple-figure-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top: auto;
+    background-color: #5d6885;
+    color: white;
+    padding: 1rem;
+}
+
+.navigation li {
+    display: block;
+    flex: 1 1 100%;
+}
+
+
+/*Mobile Screen Viewing*/
+@media screen and (max-width: 639px) {
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: lightblue;
+        z-index: 1000;
+
+    }
+
+
+
+
+    #menu {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: .5rem .8rem;
+        border-radius: 5px;
+        background-color: #eee;
+        color: #000;
+        margin: 0 1rem 0 auto;
+        outline: 1px solid black;
+    }
+
+
+    #menu::before {
+        content: "≡";
+    }
+
+    .navigation li {
+        display: none;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 0.75rem;
+        text-align: left;
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        transition: 0.3s;
+        font-size: 20px;
+        background-color: lightblue;
+    }
+
+    .navigation a:hover,
+    .navigation a:active {
+        color: white
+    }
+
+
+    .show li {
+        display: block
+    }
+
+    #menu.show::before {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        content: "X";
+    }
+
+}

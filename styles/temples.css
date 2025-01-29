@@ -101,7 +101,7 @@ footer {
 
 
 /*Mobile Screen Viewing*/
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 640px) {
     .navigation {
         display: flex;
         flex-direction: column;

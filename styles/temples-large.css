@@ -34,7 +34,7 @@
         transition: background-color 0.3s ease-in;
         background-color: rgba(185, 185, 185, 0.387);
         border: solid 1px rgba(42, 48, 56, 0.548);
-        color: rgb(177, 213, 209);
+        color: #1f1f1f;
         border-radius: 5px;
     }
 

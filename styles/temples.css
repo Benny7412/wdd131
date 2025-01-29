@@ -12,7 +12,7 @@ body {
 
 header,
 footer {
-    color: #fff;
+    color: #ffffff;
 }
 
 body {
@@ -88,7 +88,9 @@ footer {
     height: auto;
     margin-top: auto;
     background-color: #5d6885;
-    color: white;
+    color: #ffffff;
+    font-size: clamp(1.1rem, 1vw, 1.5rem);
+
     padding: 1rem;
 }
 

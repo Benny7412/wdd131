@@ -67,7 +67,7 @@ main h2 {
 #temple-container {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 15px;
     place-items: center;
     padding: 2rem;
@@ -76,7 +76,13 @@ main h2 {
 
 .temple-card {
     font-size: clamp(1rem, 1vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
+    height: 100%;
+
 }
 
 .temple-card h2 {

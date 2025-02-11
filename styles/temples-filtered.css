@@ -74,12 +74,6 @@ main h2 {
     justify-items: center;
 }
 
-#temple-container img {
-    height: 200px;
-    width: auto;
-}
-
-
 .temple-card {
     font-size: clamp(1rem, 1vw, 2rem);
     width: 100%;
@@ -125,9 +119,6 @@ footer {
         z-index: 1000;
 
     }
-
-
-
 
     #menu {
         display: block;

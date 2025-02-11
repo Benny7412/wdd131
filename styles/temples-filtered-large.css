@@ -38,5 +38,11 @@
         border-radius: 5px;
     }
 
+    #temple-container img {
+        height: 200px;
+        width: auto;
+        max-width: 250px;
+        object-fit: cover;
+    }
 
 }

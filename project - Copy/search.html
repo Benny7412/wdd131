@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | Best BBQ Texas</title>
+    <meta name="description"
+        content="This is the search page for a Website for ranking and sorting BBQ restaurants for class WDD 131 ">
+    <meta name="author" content="Benjamin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/project.css">
+</head>
+
+<body id="search-body">
+    <header>
+        <nav>
+            <a href="project.html" class="nav-link">Home</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="#" class="nav-link nav-active">Search</a>
+        </nav>
+    </header>
+    <div id="search-background" class="background">
+        <picture>
+            <source media="(max-width: 800px)" srcset="images/bbq-restaurant-small.webp" loading="lazy">
+            <img src="images/bbq-restaurant.jpg" alt="bbq restaurant interior" class="background-image" loading="lazy">
+        </picture>
+    </div>
+
+    <main id="search-main">
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="location-bar">
+                <button id="get-location-btn" class="button-styles input-styles">Use My Location</button>
+            </div>
+        </div>
+        <div id="restaurant-table" class="info-card-styling">
+            <div id="cardTest" class="bbq-info-card info-card-styling">
+                <p>Loading...</p>
+            </div>
+    </main>
+
+    <script>
+        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+            key: "AIzaSyCti6D4xzI5-_D8SgOzAGaBQS9WyIo-bMw",
+            v: "weekly",
+        });
+    </script>
+    <script src="scripts/maps.js" defer></script>
+</body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Best BBQ Texas</title>
+    <meta name="description"
+        content="This is the contact page for a Website for ranking and sorting BBQ restaurants for class WDD 131 ">
+    <meta name="author" content="Benjamin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/project.css">
+</head>
+
+<body id="contact-body">
+    <header>
+        <nav>
+            <a href="project.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link nav-active">Contact</a>
+            <a href="search.html" class="nav-link">Search</a>
+        </nav>
+    </header>
+    <div id="contact-background" class="background">
+        <picture>
+            <source media="(max-width: 800px)" srcset="images/bbq-restaurant-small.webp" loading="lazy">
+            <img src="images/bbq-restaurant.jpg" alt="bbq restaurant interior" class="background-image" loading="lazy">
+        </picture>
+    </div>
+
+    <main id="contact-main">
+        <form method="get" action="put something cool here" class="webform">
+            <fieldset>
+                <legend>Contact us</legend>
+                <label>Your name*<input type="text" name="name" placeholder="John Doe" required
+                        class="input-styles"></label>
+                <label>Phone Number<input type="tel" name=phone placeholder="Phone number" class="input-styles"></label>
+                <label>Email Address*<input type="email" name="email" placeholder="someone@gmail.com" required
+                        class="input-styles"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Preferred Contact Method</legend>
+                <label> <input type="radio" name="contactMethod" value="phone"> Phone</label>
+                <label> <input type="radio" name="contactMethod" value="email"> Email</label>
+            </fieldset>
+            <fieldset>
+                <legend>Reason for contacting</legend>
+                <label>Message<textarea id="message" name="message" placeholder="Enter your message here" rows="4"
+                        cols="40" class="input-styles"></textarea>
+            </fieldset>
+            <button type="submit" class="button-styles input-styles">Send Message</button>
+        </form>
+    </main>
+</body>

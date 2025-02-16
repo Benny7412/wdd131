@@ -1,0 +1,432 @@
+/*=====Search.HTML======*/
+:root {
+    --text-color: #ececec;
+    --background-fade-color: rgba(0, 0, 0, 0.314);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: var(--text-color);
+    font-family: "Playfair Display", serif;
+}
+
+p {
+    font-family: "Lato", serif;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.background .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0.9;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: var(--background-fade-color);
+    padding: 0.3rem;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    text-decoration: none;
+    font-size: clamp(2rem, 2vw, 4rem);
+    padding: 0 1rem;
+    color: var(--text-color);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: ease-in-out 0.1s;
+}
+
+.nav-active {
+    font-weight: bold;
+}
+
+/*============Index.HTML============*/
+
+#index-body {
+    height: auto;
+}
+
+#index-main {
+    width: 100%;
+    height: 100%;
+}
+
+#hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.info-card-styling {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--text-color);
+    border: solid 1px black;
+    background-color: var(--background-fade-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.25rem;
+}
+
+#top-spots-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+    min-width: min-content;
+    width: 60%;
+    height: fit-content;
+    margin-top: 2%;
+}
+
+.bbq-spot-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+.bbq-spot-container img {
+    width: clamp(200px, 20vw, 600px);
+    height: clamp(120px, 12vw, 600px);
+    object-fit: cover;
+}
+
+.bbq-spot-header {
+    align-self: center;
+    text-wrap: nowrap;
+    padding-bottom: 5%;
+    font-size: clamp(1.3rem, 1.5vw, 3rem);
+}
+
+#number-one {
+    grid-column: 1 / span 2;
+    justify-self: center;
+}
+
+#number-two {
+    grid-column: 1;
+    grid-row: 2;
+    margin-right: auto;
+}
+
+#number-three {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: auto;
+}
+
+/* dropdown styles */
+.location-dropdown {
+    background-color: #1b141482;
+    border: 1px solid #ccc;
+    padding: 0.625rem;
+    width: 100%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    margin-top: 0.625rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.location-dropdown p {
+    margin: 0.625rem 0;
+    font-size: clamp(14px 1vw 18px);
+}
+
+.expand-button {
+    text-decoration: none;
+    color: #007BFF;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.3125rem 0.625rem;
+    margin-top: 0.625rem;
+}
+
+.expand-button:hover {
+    color: #0056b3;
+}
+
+/*--------INFORMATIONAL SECTION--------*/
+
+#informational-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(109, 72, 16);
+    margin-top: auto;
+}
+
+.info-card {
+    width: clamp(200px, 17vw, 500px);
+    height: 100%;
+    text-align: left;
+}
+
+.info-card img {
+    width: clamp(200px, 16vw, 600px);
+    height: clamp(120px, 11vw, 600px);
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+
+.info-card p {
+    margin: 0.625rem 0 auto 0;
+}
+
+.info-card h3 {
+    align-self: center;
+    font-size: clamp(18px, 1.2vw, 25px);
+}
+
+@media screen and (max-width: 768px) {
+    #informational-section {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .info-card {
+        width: 90%;
+        max-width: 400px;
+        margin: 0.625rem;
+        align-items: center;
+    }
+}
+
+/*============Contact.HTML============*/
+
+#contact-body,
+#search-body {
+    height: auto;
+}
+
+#contact-main,
+#search-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-background,
+#search-background {
+    position: fixed;
+}
+
+.webform {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: fit-content;
+    background-color: var(--background-fade-color);
+    padding: 1rem;
+    margin: 1rem;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+
+.webform legend {
+    font-size: clamp(19px, 1.2vw, 25px)
+}
+
+.webform fieldset {
+    display: block;
+    margin: 1rem 0;
+    width: fit-content;
+    border-radius: 7px;
+    border: solid 2px rgba(0, 0, 0, 0.395);
+    width: 100%;
+}
+
+.webform input[type=text],
+.webform input[type=tel],
+.webform input[type=email] {
+    display: block;
+    background-color: rgba(255, 253, 253, 0.878);
+    padding: .6rem 6rem .6rem 0.5rem;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.webform label {
+    display: block;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.webform textarea {
+    display: block;
+    overflow: auto;
+    resize: none;
+    border-radius: 5px;
+}
+
+.input-styles {
+    border: black solid 1px;
+    box-shadow: none;
+}
+
+.input-styles:hover {
+    border: rgba(2, 130, 124, 0.437) solid 1px;
+    transition: ease-in-out 0.1s;
+}
+
+.input-styles:active {
+    background-color: rgb(227, 227, 227);
+}
+
+.input-styles:focus {
+    outline: none;
+    border: rgb(0, 255, 255) solid 1px;
+}
+
+.button-styles {
+    padding: 0.7rem 1.6rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: clamp(14px, 0.9vw, 20px);
+    width: 60%;
+    align-self: center;
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+
+/*============Search.HTML============*/
+
+#map-container {
+    width: fit-content;
+    margin-top: 2%;
+    padding: 10px;
+}
+
+#get-location-btn {
+    margin: 0.3125rem;
+    width: 40%;
+}
+
+#map {
+    width: clamp(300px, 80vw, 500px);
+    height: clamp(300px, 60vh, 500px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#restaurant-table {
+    background-color: var(--background-fade-color);
+    width: clamp(500px, 70vw, 1920px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+}
+
+.bbq-info-card {
+    padding: 1rem;
+    align-items: flex-start;
+    width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bbq-info-card img {
+    max-width: 100px;
+    margin-right: 1rem;
+    height: auto;
+    border-radius: 5px;
+}
+
+.bbq-details {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bbq-info-card h3 {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.bbq-details p {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.rating-line {
+    display: flex;
+    align-items: center;
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
+}
+
+.rating-line span {
+    margin-right: 0.5rem;
+}
+
+.clear {
+    clear: both;
+}

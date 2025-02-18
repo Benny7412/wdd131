@@ -134,7 +134,11 @@ select {
     height: 35px;
 }
 
+legend {
+    font-family: "Playfair Display";
+    font-weight: 700;
 
+}
 
 .stars {
     display: flex;

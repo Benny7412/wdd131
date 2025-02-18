@@ -7,8 +7,6 @@
     <title>Review Form | WDD131</title>
     <meta name="description" content="This is a review form for WDD 131">
     <meta name="author" content="Benjamin">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/form.css">
 
     <script src="scripts/getdates.js" defer></script>
@@ -44,7 +42,7 @@
                     <label for="durability"><input type="checkbox" id="durability" name="useful-feat"
                             value="durability">Durability</label><br>
                     <label for="ease_of_use"><input type="checkbox" id="ease-of-use" name="useful-feat"
-                            value="ease_of_use">Ease of use</label><br>
+                            value="ease_of_use">Ease of use</l  abel><br>
                     <label for="performance"><input type="checkbox" id="performance" name="useful-feat"
                             value="performance">Performance</label><br>
                     <label for="design"><input type="checkbox" id="design" name="useful-feat"
@@ -52,17 +50,17 @@
                 </div>
                 <h3>Overall Rating</h3>
                 <div class="stars">
-                    <input type="radio" id="five-star" name="stars" value="5" required><label for="fivestar"></label>
-                    <input type="radio" id="four-star" name="stars" value="4" required><label for="fourstar"></label>
-                    <input type="radio" id="three-star" name="stars" value="3" required><label for="threestar"></label>
-                    <input type="radio" id="two-star" name="stars" value="2" required><label for="twostar"></label>
-                    <input type="radio" id="one-star" name="stars" value="1" required><label for="onestar"></label>
+                    <input type="radio" id="five-star" name="stars" value="5" required><label for="five-star"></label>
+                    <input type="radio" id="four-star" name="stars" value="4" required><label for="four-star"></label>
+                    <input type="radio" id="three-star" name="stars" value="3" required><label for="three-star"></label>
+                    <input type="radio" id="two-star" name="stars" value="2" required><label for="two-star"></label>
+                    <input type="radio" id="one-star" name="stars" value="1" required><label for="one-star"></label>
                 </div>
             </fieldset>
             <fieldset>
                 <legend>Written Review</legend>
-                <label>Review Message<span class="small-text">(optional)</span><textarea id="message" name="message"
-                        placeholder="Enter your message here" rows="4" cols="40"></textarea>
+                <label>Review Message<span class="small-text">(optional)</span><textarea input type="text" id="message"
+                        name="message" placeholder="Enter your message here" rows="4" cols="40"></textarea>
                     <label>Name<span class="small-text">(optional)</span><input type="name" name="name"
                             placeholder="John"></label>
             </fieldset>
@@ -77,3 +75,5 @@
         </footer>
     </main>
 </body>
+
+</html>

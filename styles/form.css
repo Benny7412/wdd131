@@ -1,0 +1,200 @@
+:root {
+    --text-color: #000;
+    --background-color: rgba(176, 200, 223, 0.682);
+    --accent-color: rgba(89, 153, 196, 0.433);
+    --small-font: clamp(12px, 0.8vw, 16px);
+    --normal-font: clamp(14px, 1vw, 22px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    background-color: var(--accent-color);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    width: 100vw;
+    font-size: clamp(14px, 1vw, 20px);
+}
+
+form {
+    background-color: var(--background-color);
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #000;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+}
+
+form legend {
+    font-size: clamp(19px, 1.2vw, 25px);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+form fieldset {
+    border: 2px solid rgba(0, 0, 0, 0.395);
+    border-radius: 7px;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+#select-product-name {
+    height: 30px;
+
+}
+
+form label {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: var(--normal-font)
+}
+
+form span {
+    font-size: var(--small-font);
+}
+
+h3 {
+    font-size: var(--normal-font);
+}
+
+.margin-style {
+    margin-bottom: 15px;
+}
+
+
+#product-survey label {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 1rem;
+}
+
+#product-survey input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5rem;
+}
+
+select,
+input[type="date"],
+input[type="name"],
+input[type="email"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 253, 253, 0.878);
+    margin-bottom: 1rem;
+    resize: none;
+}
+
+textarea {
+    width: 100%;
+}
+
+select {
+    padding: 2px;
+    height: 35px;
+}
+
+
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0.5rem 0 1rem 0;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.stars>input {
+    display: none;
+}
+
+.stars>label {
+    color: gold;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.stars>label:hover,
+.stars>label:hover~label {
+    color: #000;
+}
+
+.stars>label::before {
+    content: "\2606";
+}
+
+.stars>input:checked~label::before {
+    content: "\2605";
+}
+
+.submit-btn {
+    padding: 0.7rem 1.6rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: clamp(14px, 0.9vw, 20px);
+    width: 60%;
+    align-self: center;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.submit-btn:hover {
+    border-color: rgba(2, 130, 124, 0.437);
+}
+
+.submit-btn:active {
+    background-color: rgb(227, 227, 227);
+}
+
+.submit-btn:focus {
+    outline: none;
+    border-color: cyan;
+}

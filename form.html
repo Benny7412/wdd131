@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Form | WDD131</title>
+    <meta name="description" content="This is a review form for WDD 131">
+    <meta name="author" content="Benjamin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/form.css">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+
+        <form method="get" id="webform" action="review.html">
+            <fieldset>
+                <legend>Contact us</legend>
+                <label id="select-label">Product Name*
+                    <select name="name" id="select-product-name" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                        <!--Populated with JS-->
+                    </select>
+                </label>
+                <label>Date of Installation*<input type="date" name="date" id="date" required
+                        onfocus="this.showPicker()"></label>
+                <label>Email Address*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
+
+            </fieldset>
+            <fieldset>
+                <legend>Product survey</legend>
+                <h3 class="margin-style">Which features did you find useful in the product? <span
+                        class="small-text">(Check all that
+                        apply)</span></h3>
+                <div id="product-survey">
+                    <label for="durability"><input type="checkbox" id="durability" name="useful-feat"
+                            value="durability">Durability</label><br>
+                    <label for="ease_of_use"><input type="checkbox" id="ease-of-use" name="useful-feat"
+                            value="ease_of_use">Ease of use</label><br>
+                    <label for="performance"><input type="checkbox" id="performance" name="useful-feat"
+                            value="performance">Performance</label><br>
+                    <label for="design"><input type="checkbox" id="design" name="useful-feat"
+                            value="design">Design</label><br>
+                </div>
+                <h3>Overall Rating</h3>
+                <div class="stars">
+                    <input type="radio" id="five-star" name="stars" value="5" required><label for="fivestar"></label>
+                    <input type="radio" id="four-star" name="stars" value="4" required><label for="fourstar"></label>
+                    <input type="radio" id="three-star" name="stars" value="3" required><label for="threestar"></label>
+                    <input type="radio" id="two-star" name="stars" value="2" required><label for="twostar"></label>
+                    <input type="radio" id="one-star" name="stars" value="1" required><label for="onestar"></label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Written Review</legend>
+                <label>Review Message<span class="small-text">(optional)</span><textarea id="message" name="message"
+                        placeholder="Enter your message here" rows="4" cols="40"></textarea>
+                    <label>Name<span class="small-text">(optional)</span><input type="name" name="name"
+                            placeholder="John"></label>
+            </fieldset>
+            <button type="submit" class="submit-btn">Send Review</button>
+        </form>
+
+        <footer>
+
+            <p><span id="currentyear"></span> | Benjamin Walveranta | Texas, USA</p>
+            <p>Last modified: <span id="lastModified"></span></p>
+
+        </footer>
+    </main>
+</body>

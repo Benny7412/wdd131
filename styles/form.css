@@ -112,7 +112,7 @@ h3 {
 
 select,
 input[type="date"],
-input[type="name"],
+input[type="text"],
 input[type="email"],
 textarea {
     display: block;

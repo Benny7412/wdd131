@@ -1,7 +1,9 @@
 /*=====Search.HTML======*/
 :root {
     --text-color: #ececec;
-    --background-fade-color: rgba(0, 0, 0, 0.314);
+    --background-fade-color: rgba(0, 0, 0, 0.414);
+    --secondary-accent: #6d4810;
+    --primary-accent: #8B4513;
 }
 
 * {
@@ -70,22 +72,18 @@ nav {
 .nav-link {
     display: flex;
     text-decoration: none;
-    font-size: clamp(1.5rem, 2vw, 3rem);
-    padding: 0 1rem;
+    font-size: clamp(1.2rem, 2vw, 3rem);
+    padding: 0.5rem 1.2rem;
     color: var(--text-color);
     border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
+    transition: all 0.1s ease-in-out;
 }
+
 
 .nav-link:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--primary-accent);
     transition: ease-in-out 0.1s;
-}
-
-.nav-active {
-    [] font-weight: bold;
+    transform: translateY(-2px);
 }
 
 /*============Index.HTML============*/
@@ -120,12 +118,14 @@ nav {
     padding: 1.25rem;
 }
 
+
+
 #top-spots-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 1rem;
-    width: 90%;
+    width: 60%;
     height: fit-content;
     margin: 2% auto;
 }
@@ -135,24 +135,30 @@ nav {
     display: flex;
     position: relative;
     flex-direction: column;
-    padding: 0.625rem;
-    margin-bottom: 0.625rem;
     width: fit-content;
     height: fit-content;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    padding: 1rem;
+    transition: transform 0.2s ease;
 }
+
 
 .bbq-spot-container img {
     width: clamp(200px, 20vw, 600px);
     height: clamp(120px, 12vw, 600px);
     object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .bbq-spot-header {
     align-self: center;
     text-wrap: nowrap;
     padding-bottom: 5%;
-    font-size: clamp(1.3rem, 1.5vw, 3rem);
+    font-size: clamp(1.1rem, 1.5vw, 3rem);
 }
 
 #number-one {
@@ -249,11 +255,10 @@ nav {
 }
 
 .info-card {
-    width: clamp(230px, 17vw, 500px);
+    width: clamp(230px, 19vw, 500px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
 }
 
 .info-card img {
@@ -318,12 +323,14 @@ nav {
     display: flex;
     flex-direction: column;
     align-self: center;
-    width: fit-content;
-    background-color: var(--background-fade-color);
     padding: 1rem;
     margin: 1rem;
-    border: solid 1px black;
-    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: var(--card-shadow);
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    min-width: fit-content;
 }
 
 .webform legend {
@@ -344,7 +351,7 @@ nav {
 .webform input[type=email] {
     display: block;
     background-color: rgba(255, 253, 253, 0.878);
-    padding: .6rem 6rem .6rem 0.5rem;
+    padding: .6rem 5rem .6rem 0.5rem;
     border-radius: 5px;
     text-align: left;
 }
@@ -359,6 +366,8 @@ nav {
     overflow: auto;
     resize: none;
     border-radius: 5px;
+    width: 100%;
+    padding: .7rem 6rem .7rem 0.5rem;
 }
 
 .input-styles {
@@ -389,6 +398,14 @@ nav {
     align-self: center;
     text-wrap: nowrap;
     cursor: pointer;
+    background-color: var(--primary-accent);
+    color: var(--text-color);
+    transition: all 0.2s ease;
+}
+
+.button-styles:hover {
+    background-color: #a65d1e;
+    transform: translateY(-1px);
 }
 
 /*============Search.HTML============*/
@@ -416,14 +433,11 @@ nav {
 #restaurant-table {
     background-color: var(--background-fade-color);
     width: 90%;
-    /* Changed from fixed clamp to percentage */
     max-width: 1920px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    /* Slightly reduced minimum size */
     gap: 1rem;
     margin: 1rem auto;
-    /* Center the table and add some margin */
     padding: 1rem;
 }
 
@@ -431,11 +445,8 @@ nav {
     padding: 1rem;
     align-items: flex-start;
     width: 100%;
-    /* Changed from fixed 300px to be responsive */
     max-width: 300px;
-    /* Add max-width to maintain card size */
     margin: 0 auto;
-    /* Center cards in their grid cells */
     box-sizing: border-box;
     display: flex;
     border: 1px solid #ccc;
@@ -443,15 +454,12 @@ nav {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Update media query */
 @media screen and (max-width: 768px) {
     #restaurant-table {
         width: 95%;
-        /* Use more width on mobile */
         padding: 0.5rem;
         gap: 0.5rem;
         grid-template-columns: 1fr;
-        /* Force single column on mobile */
     }
 
     .bbq-info-card {
@@ -460,11 +468,9 @@ nav {
     }
 }
 
-/* Remove or update the problematic mobile style */
 @media screen and (max-width: 440px) {
     #restaurant-table {
         margin-left: 0;
-        /* Remove the 150px margin that was causing overflow */
         width: 95%;
     }
 }
@@ -518,5 +524,4 @@ nav {
 
 .bbq-info-card img {
     display: none;
-}
 }
